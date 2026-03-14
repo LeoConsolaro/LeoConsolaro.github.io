@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rapport - Portfolio Léo Consolaro</title>
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" sizes="32x32" href="Portfoliofavicon.png">
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Icônes Bootstrap -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <!-- CSS-->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="bg-light">
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-white py-3 shadow-sm fixed-top">
+        <div class="container">
+            <a class="navbar-brand d-flex flex-column align-items-center fw-bold text-decoration-none"
+                href="index.html">
+                <span class="fs-4 text-primary-dark">&lt;/&gt;</span>
+                <span class="fs-6 text-dark" style="font-size: 0.8rem !important;">Consolaro</span>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                <ul class="navbar-nav gap-3">
+                    <li class="nav-item"><a class="nav-link text-dark" href="index.html#accueil">Accueil</a></li>
+                    <li class="nav-item"><a class="nav-link text-dark" href="index.html#apropos">À propos</a></li>
+                    <li class="nav-item"><a class="nav-link text-dark" href="index.html#competences">Compétences</a>
+                    </li>
+                    <li class="nav-item"><a class="nav-link text-dark fw-medium" href="index.html#projets">Projets</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- EN-TÊTE DU RAPPORT -->
+    <header class="article-header py-5 mt-5 pt-5">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <!-- Bouton retour -->
+                    <a href="index.html#projets"
+                        class="text-decoration-none d-inline-flex align-items-center mb-4 text-muted hover-primary">
+                        <i class="bi bi-arrow-left me-2"></i> Retour aux projets
+                    </a>
+
+                    <div class="mb-3">
+                        <span class="badge bg-primary text-white px-3 py-2 rounded-3">Site Vitrine</span>
+                        <span class="badge bg-secondary text-white px-3 py-2 rounded-3 ms-2">Projet BTS SIO</span>
+                    </div>
+
+                    <h1 class="display-5 fw-bold text-dark mb-4">Création de mon Portfolio Personnel</h1>
+
+                    <p class="lead text-muted mb-5">
+                        Conception et développement d'un site vitrine sur-mesure pour centraliser mes compétences,
+                        valoriser mes projets et construire une identité numérique professionnelle forte en tant que
+                        futur développeur.
+                    </p>
+
+                    <!-- Image de couverture du projet (Votre maquette) -->
+                    <div class="article-cover rounded-4 overflow-hidden shadow-sm mb-5 bg-white text-center p-3">
+                        <!-- Vous pourrez remplacer par une capture d'écran globale de votre site -->
+                        <img src="PhotoProjet1.png" alt="Aperçu du Portfolio Léo Consolaro"
+                            class="img-fluid rounded-3 object-fit-cover" style="max-height: 450px; width: 100%;">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- CORPS DU RAPPORT -->
+    <article class="py-2 pb-5 mb-5">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <div class="card border-0 shadow-sm rounded-4 p-4 p-md-5">
+                        <div class="card-body article-content">
+
+                            <h2 class="h3 fw-bold mb-4">1. Le contexte et les objectifs</h2>
+                            <p>Dans le cadre de mon <strong>BTS SIO (Services Informatiques aux Organisations), option
+                                    SLAM</strong>, la validation de mes compétences passe par la réalisation de projets
+                                concrets. La création de ce portfolio s'est imposée comme le projet fondamental de ma
+                                première année. <br> L'objectif principal n'était pas seulement de coder un site, mais
+                                de créer une véritable
+                                carte de visite interactive permettant à des recruteurs (pour une recherche de stage ou
+                                d'alternance) ou à des enseignants d'évaluer rapidement mon profil technique.</p>
+
+                            <h2 class="h3 fw-bold mt-5 mb-4">2. L'importance de l'identité numérique</h2>
+                            <p>Aujourd'hui, le CV papier ne suffit plus, particulièrement dans les métiers de la tech.
+                                Avoir une <strong>identité numérique maîtrisée</strong> est devenu un prérequis.</p>
+
+                            <div class="alert alert-primary border-0 bg-primary-subtle my-4" role="alert">
+                                <p class="mb-0 text-dark">Ce portfolio me permet de contrôler l'image que je renvoie sur
+                                    le web. Il agit comme un <strong>tiers de confiance</strong> : il prouve que je sais
+                                    faire ce que j'écris sur mon CV. En hébergeant mes travaux de veille informatique et
+                                    mes projets de développement, je démontre ma capacité à structurer l'information et
+                                    à m'auto-former, des qualités essentielles pour un développeur.</p>
+                            </div>
+
+                            <h2 class="h3 fw-bold mt-5 mb-4">3. Choix techniques et Stack</h2>
+                            <p>Pour ce projet, j'ai opté pour une approche assistée par framework afin de
+                                garantir la performance et la propreté du code, tout en respectant les standards actuels
+                                du webdesign :</p>
+
+                            <div class="row g-4 mt-2 mb-4">
+                                <div class="col-md-6">
+                                    <div class="p-3 border rounded-3 h-100">
+                                        <h5 class="fw-bold fs-6 text-primary-dark">HTML & CSS</h5>
+                                        <p class="small text-muted mb-0">Structuration de la page et création
+                                            de variables CSS personnalisées pour la charte
+                                            graphique.</p>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="p-3 border rounded-3 h-100">
+                                        <h5 class="fw-bold fs-6 text-primary-dark">Bootstrap</h5>
+                                        <p class="small text-muted mb-0">Utilisation du framework pour le système de
+                                            grille, assurant un design 100% responsive.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <h2 class="h3 fw-bold mt-5 mb-4">4. Les défis rencontrés</h2>
+                            <p>L'un des défis majeurs a été l'intégration de l'interface utilisateur. Il a fallu assurer
+                                une compatibilité parfaite sur les écrans mobiles tout en gardant un
+                                design épuré sur ordinateur. J'ai notamment travaillé sur :</p>
+                            <ul class="text-muted">
+                                <li class="mb-2">La gestion de la barre de navigation fixée et son
+                                    impact sur le CSS de la page.</li>
+                                <li class="mb-2">L'extraction d'une palette de couleurs cohérente basée sur ma photo de
+                                    profil professionnelle.</li>
+                                <li class="mb-2">La mise en valeur de mes projets et compétences clés pour offrir une
+                                    navigation claire et efficace.</li>
+                            </ul>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </article>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white py-4 mt-auto">
+        <div class="container text-center">
+            <div class="mb-3 social-links">
+                <a href="https://www.linkedin.com/in/l%C3%A9o-consolaro/" class="text-white text-decoration-none mx-2"
+                    target="_blank"><i class="bi bi-linkedin fs-5"></i></a>
+                <a href="https://github.com/LeoConsolaro" class="text-white text-decoration-none mx-2"
+                    target="_blank"><i class="bi bi-github fs-5"></i></a>
+                <a href="mailto:leoconso21@gmail.com" alt="mail: leoconso21@gmail.com"
+                    class="text-white text-decoration-none mx-2"><i class="bi bi-envelope fs-5"></i></a>
+            </div>
+            <p class="small mb-0 opacity-50">&copy; 2026 Consolaro. Tous droits réservés.</p>
+        </div>
+    </footer>
+
+    <!-- Bootstrap -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

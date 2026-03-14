@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Faille Critique WordPress - Portfolio Léo Consolaro</title>
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" sizes="32x32" href="Portfoliofavicon.png">
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Icônes Bootstrap -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <!-- CSS-->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="bg-light">
+
+    <!-- Navigation -->
+    <nav id="navbar-example" class="navbar navbar-expand-lg fixed-top navbar-light bg-white shadow-sm">
+        <div class="container">
+            <a href="index.html#accueil">
+                <img class="navbar-brand fw-bold" src="logo.png" alt="Logo d'un étudiant BTS SIO Option SLAM"
+                    id="logonavbar">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item"><a class="nav-link active" href="index.html#accueil">Accueil</a></li>
+                    <li class="nav-item"><a class="nav-link" href="index.html#a-propos">À propos</a></li>
+                    <li class="nav-item"><a class="nav-link" href="index.html#competences">Compétences</a></li>
+                    <li class="nav-item"><a class="nav-link" href="index.html#projets">Projets</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- EN-TÊTE DE L'ARTICLE -->
+    <header class="article-header py-5 mt-5 pt-5">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <!-- Bouton retour -->
+                    <a href="index.html#projets"
+                        class="text-decoration-none d-inline-flex align-items-center mb-4 text-muted hover-primary">
+                        <i class="bi bi-arrow-left me-2"></i> Retour aux projets
+                    </a>
+                    <div class="mb-3">
+                        <span class="badge bg-primary text-white px-3 py-2 rounded-3">Veille Info</span>
+                        <span class="text-muted ms-3 small">Mars 2026</span>
+                    </div>
+
+                    <h1 class="display-5 fw-bold text-dark mb-4">Faille Critique WordPress : CVE-2026-1492</h1>
+
+                    <p class="lead text-muted mb-5">
+                        Analyse technique de la vulnérabilité permettant de devenir administrateur sans
+                        authentification, et rappel des bonnes pratiques de sécurisation des CMS.
+                    </p>
+
+                    <!-- Image de couverture de l'article -->
+                    <div class="article-cover rounded-4 overflow-hidden shadow-sm mb-5">
+                        <img src="PhotoProjet2.png" alt="Code informatique sécurité"
+                            class="img-fluid w-100 object-fit-cover" style="height: 400px;">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- CORPS DE L'ARTICLE -->
+    <article class="py-2 pb-5 mb-5">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <div class="card border-0 shadow-sm rounded-4 p-4 p-md-5">
+                        <div class="card-body article-content">
+
+                            <h2 class="h3 fw-bold mb-4">Les plugins WordPress face aux vulnérabilités critiques</h2>
+                            <p>Bien que WordPress alimente une immense partie du web mondial, son vaste écosystème
+                                d'extensions reste sa principale surface d'attaque. Début mars 2026, une nouvelle
+                                vulnérabilité critique a mis en lumière les risques liés à la gestion des droits
+                                utilisateurs au sein du CMS.</p>
+
+                            <h2 class="h3 fw-bold mt-5 mb-4">La compromission par élévation de privilèges</h2>
+                            <p>Le 5 mars 2026, une faille de sécurité majeure (référencée
+                                <strong>CVE-2026-1492</strong>) a été découverte dans l'extension <em>User Registration
+                                    & Membership</em>, installée sur plus de 60 000 sites. Évaluée avec un score de
+                                sévérité CVSS de 9.8/10, cette brèche permet une compromission totale du site web.
+                            </p>
+
+                            <div class="alert alert-danger border-0 border-start border-danger border-4 bg-danger bg-opacity-10 my-4"
+                                role="alert">
+                                <strong>Le problème technique :</strong> Il se situe dans le processus d'enregistrement
+                                des nouveaux membres. Un attaquant non authentifié peut manipuler la requête HTTP lors
+                                de la création de son compte pour s'attribuer directement le rôle de son choix. En
+                                quelques minutes, un simple visiteur peut ainsi contourner la sécurité et obtenir les
+                                pleins pouvoirs d'un compte Administrateur.
+                            </div>
+
+                            <h2 class="h3 fw-bold mt-5 mb-4">Une menace qui succède à l'affaire WPvivid</h2>
+                            <p>Cette alerte intervient quelques semaines seulement après une autre faille massive
+                                (CVE-2026-1357) révélée mi-février 2026. Celle-ci ciblait le plugin <em>WPvivid Backup &
+                                    Migration</em>, utilisé par plus de 800 000 sites web. La vulnérabilité reposait sur
+                                une faiblesse d'upload arbitraire : en exploitant un paramètre spécifique
+                                (<code>wpvivid_action=send_to_site</code>), un pirate pouvait injecter et exécuter des
+                                fichiers malveillants directement sur le serveur hébergeant le site.</p>
+
+                            <h2 class="h3 fw-bold mt-5 mb-4">Bonnes pratiques et sécurisation</h2>
+                            <p>Pour un développeur web, ces incidents rappellent que le déploiement d'un site doit
+                                s'accompagner d'un Maintien en Conditions de Sécurité (MCS) rigoureux. Pour se prémunir
+                                de ces attaques, plusieurs actions sont indispensables :</p>
+
+                            <ul class="list-group list-group-flush mt-4 mb-4">
+                                <li class="list-group-item bg-transparent border-bottom py-3 px-0">
+                                    <h5 class="fw-bold mb-1 text-primary-dark">1. Mises à jour immédiates</h5>
+                                    <p class="mb-0 text-muted">Appliquer les correctifs (patchs) dès leur sortie par les
+                                        éditeurs des plugins.</p>
+                                </li>
+                                <li class="list-group-item bg-transparent border-bottom py-3 px-0">
+                                    <h5 class="fw-bold mb-1 text-primary-dark">2. Principe de moindre privilège</h5>
+                                    <p class="mb-0 text-muted">Limiter le nombre d'extensions installées au strict
+                                        nécessaire pour réduire la surface d'attaque.</p>
+                                </li>
+                                <li class="list-group-item bg-transparent border-bottom py-3 px-0">
+                                    <h5 class="fw-bold mb-1 text-primary-dark">3. Surveillance active</h5>
+                                    <p class="mb-0 text-muted">Auditer régulièrement les journaux d'activité (logs) pour
+                                        repérer la création suspecte de comptes administrateurs.</p>
+                                </li>
+                                <li class="list-group-item bg-transparent py-3 px-0">
+                                    <h5 class="fw-bold mb-1 text-primary-dark">4. Protection périmétrique</h5>
+                                    <p class="mb-0 text-muted">Utiliser des solutions de sécurité (comme un Web
+                                        Application Firewall) pour bloquer les requêtes malveillantes avant qu'elles
+                                        n'atteignent le code de l'application.</p>
+                                </li>
+                            </ul>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </article>
+
+    <!-- Footer-->
+    <footer class="bg-dark text-white py-4 mt-auto">
+        <div class="container text-center">
+            <div class="mb-3 social-links">
+                <a href="https://www.linkedin.com/in/l%C3%A9o-consolaro/" class="text-white text-decoration-none mx-2"
+                    target="_blank"><i class="bi bi-linkedin fs-5"></i></a>
+                <a href="https://github.com/LeoConsolaro" class="text-white text-decoration-none mx-2"
+                    target="_blank"><i class="bi bi-github fs-5"></i></a>
+                <a href="mailto:leoconso21@gmail.com" alt="mail: leoconso21@gmail.com"
+                    class="text-white text-decoration-none mx-2"><i class="bi bi-envelope fs-5"></i></a>
+            </div>
+            <p class="small mb-0 opacity-50">&copy; 2026 Consolaro. Tous droits réservés.</p>
+        </div>
+    </footer>
+
+    <!-- Bootstrap -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
