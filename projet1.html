@@ -4,10 +4,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Rapport - Portfolio Léo Consolaro</title>
     <meta name="description"
-        content="Création portfolio responsive : contextes, choix techniques avec Bootstrap, design 100% mobile-first, projet BTS SIO SLAM de Léo Consolaro.">
+        content="Rapport sur la création du portfolio responsive de Léo Consolaro, étudiant BTS SIO SLAM à Dijon : contextes du projet, choix techniques Bootstrap/CSS, structure HTML sémantique, design 100% mobile-first et optimisation performances.">
 
+    <title>Rapport - Portfolio Léo Consolaro</title>
     <!-- Favicon -->
     <link rel="icon" type="image/webp" sizes="32x32" href="Portfoliofavicon.webp">
     <!-- Bootstrap 5 CSS -->
@@ -23,24 +23,22 @@
 <body class="bg-light">
 
     <!-- Navigation -->
-    <nav class="navbar navbar-expand-lg navbar-light bg-white py-3 shadow-sm fixed-top">
+    <nav id="navbar-example" class="navbar navbar-expand-lg fixed-top navbar-light bg-white shadow-sm">
         <div class="container">
-            <a class="navbar-brand d-flex flex-column align-items-center fw-bold text-decoration-none"
-                href="index.html">
-                <span class="fs-4 text-primary-dark">&lt;/&gt;</span>
-                <span class="fs-6 text-dark" style="font-size: 0.8rem !important;">Consolaro</span>
+            <a href="index.html#accueil">
+                <img class="navbar-brand fw-bold" src="logo.webp" alt="Logo d'un étudiant BTS SIO Option SLAM"
+                    id="logonavbar">
             </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
-                <ul class="navbar-nav gap-3">
-                    <li class="nav-item"><a class="nav-link text-dark" href="index.html#accueil">Accueil</a></li>
-                    <li class="nav-item"><a class="nav-link text-dark" href="index.html#apropos">À propos</a></li>
-                    <li class="nav-item"><a class="nav-link text-dark" href="index.html#competences">Compétences</a>
-                    </li>
-                    <li class="nav-item"><a class="nav-link text-dark fw-medium" href="index.html#projets">Projets</a>
-                    </li>
+                <ul class="navbar-nav">
+                    <li class="nav-item"><a class="nav-link active" href="index.html#accueil">Accueil</a></li>
+                    <li class="nav-item"><a class="nav-link" href="index.html#a-propos">À propos</a></li>
+                    <li class="nav-item"><a class="nav-link" href="index.html#competences">Compétences</a></li>
+                    <li class="nav-item"><a class="nav-link" href="index.html#projets">Projets</a></li>
                 </ul>
             </div>
         </div>
